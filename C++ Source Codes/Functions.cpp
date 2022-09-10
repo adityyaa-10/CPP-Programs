@@ -159,22 +159,73 @@ int main()
     int ans = AP(n);
     cout<<ans<<endl;
     return 0;
+}
+
+Function Prototype
+In C++, the code of function declaration should be before the function call. 
+However, if we want to define a function after the function call, we need to
+ use the function prototype. For example,
+
+ // function prototype
+void add(int, int);
+
+int main() {
+    // calling the function before declaration.
+    add(5, 3);
+    return 0;
+}
+
+// function definition
+void add(int a, int b) {
+    cout << (a + b);
+}
+
+The syntax of a function prototype is:
+returnType functionName(dataType1, dataType2, ...);
+
+Example Problem
+// using function definition after main() function
+// function prototype is declared before main()
+
+#include <iostream>
+
+using namespace std;
+
+// function prototype
+int add(int, int);
+
+int main() {
+    int sum;
+
+    // calling the function and storing
+    // the returned value in sum
+    sum = add(100, 78);
+
+    cout << "100 + 78 = " << sum << endl;
+
+    return 0;
+}
+
+// function definition
+int add(int a, int b) {
+    return (a + b);
+}
+
+Program to Find the Square Root of a Number
+
+#include <iostream>
+#include <cmath>   //cmath header file contains sqrt() function
+using namespace std;
+
+int main() {
+    double number, squareRoot;
+    
+    number = 25.0;
+
+    // sqrt() is a library function to calculate the square root
+    squareRoot = sqrt(number);
+
+    cout << "Square root of " << number << " = " << squareRoot;
+
+    return 0;
 }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
